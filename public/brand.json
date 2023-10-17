@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "image": "https://static.vecteezy.com/system/resources/previews/022/101/039/original/gucci-logo-transparent-free-png.png"
+  },
+  {
+    "id": 2,
+    "brand": "Adidas",
+    "image": "https://logos-world.net/wp-content/uploads/2020/04/Adidas-Logo-1991-present.jpg"
+  },
+  {
+    "id": 3,
+    "brand": "Nike",
+    "image": "https://logowik.com/content/uploads/images/697_nike.jpg"
+  },
+  {
+    "id": 4,
+    "brand": "Zara",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1280px-Zara_Logo.svg.png"
+  },
+  {
+    "id": 5,
+    "brand": "Coca-Cola",
+    "image": "https://example.com/cocacola.png"
+  },
+  {
+    "id": 6,
+    "brand": "Microsoft",
+    "image": "https://example.com/microsoft.png"
+  }
+]
