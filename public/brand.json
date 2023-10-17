@@ -21,12 +21,12 @@
   },
   {
     "id": 5,
-    "brand": "Coca-Cola",
-    "image": "https://example.com/cocacola.png"
+    "brand": "H&M",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/2560px-H%26M-Logo.svg.png"
   },
   {
     "id": 6,
-    "brand": "Microsoft",
-    "image": "https://example.com/microsoft.png"
+    "brand": "Levis's",
+    "image": "https://www.levi.com/ngsa/img/logos/levi-logo-large.png"
   }
 ]

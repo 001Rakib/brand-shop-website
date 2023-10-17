@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const BrandCard = ({ brand }) => {
   return (
     <div>
@@ -16,3 +18,6 @@ const BrandCard = ({ brand }) => {
 };
 
 export default BrandCard;
+BrandCard.propTypes = {
+  brand: PropTypes.object,
+};
