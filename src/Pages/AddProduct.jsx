@@ -1,10 +1,41 @@
+import toast from "react-hot-toast";
+
 const AddProduct = () => {
+  const handleAddProduct = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const brand_name = form.brandName.value;
+    const image = form.image.value;
+    const type = form.type.value;
+    const description = form.description.value;
+    const rating = form.rating.value;
+
+    const newProduct = { name, brand_name, image, type, description, rating };
+
+    console.log(JSON.stringify(newProduct));
+    // send products to database
+    fetch("http://localhost:5000/brandProducts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          toast.success("Product added successfully");
+        }
+      });
+  };
+
   return (
-    <div className="max-w-screen-xl mx-auto text-center bg-blue-400 py-10">
+    <div className="max-w-screen-xl mx-auto text-center bg-blue-400 py-10 my-5">
       <h2 className="text-3xl font-semibold my-10">
         Add Products To Your Brand
       </h2>
-      <form className="">
+      <form onSubmit={handleAddProduct}>
         <div>
           <input
             className="bg-slate-100 rounded-md border px-4 py-2 mt-4 mr-8"
@@ -36,7 +67,7 @@ const AddProduct = () => {
         <div>
           <input
             className="bg-slate-100 rounded-md border px-4 py-2 mt-4 mr-8"
-            type="text"
+            type="number"
             name="price"
             placeholder="Price"
           />
@@ -50,7 +81,7 @@ const AddProduct = () => {
         <div className="">
           <input
             className="bg-slate-100 rounded-md border px-4 py-2 mt-4 mr-8"
-            type="text"
+            type="number"
             name="rating"
             placeholder="Rating"
           />

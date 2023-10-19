@@ -7,7 +7,6 @@ const BrandProducts = () => {
   const clickedBrand = brandProducts.filter(
     (products) => products.brand_name == id
   );
-  console.log(id, clickedBrand);
   return (
     <div>
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2  space-y-5 justify-between my-6">
