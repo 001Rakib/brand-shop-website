@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const BrandCard = ({ brand }) => {
   return (
-    <Link to={`brand/${brand.brand}`}>
+    <Link className="max-w-screen-xl mx-auto" to={`brand/${brand.brand}`}>
       <div>
         <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
           <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg h-80 rounded-xl bg-clip-border">
