@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 const BrandProductCard = ({ prod }) => {
-  const { name, brand_name, image, price, rating, type } = prod;
-  console.log(name);
+  const { name, brand_name, image, price, rating, type, _id } = prod;
+  console.log(_id);
   return (
     <>
       {prod ? (
@@ -36,9 +38,11 @@ const BrandProductCard = ({ prod }) => {
                 >
                   Details
                 </a>
-                <button className="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-5 py-2.5 text-center font-medium">
-                  Update
-                </button>
+                <Link to={`/updateProduct/${_id}`}>
+                  <button className="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-5 py-2.5 text-center font-medium">
+                    Update
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -55,3 +59,6 @@ const BrandProductCard = ({ prod }) => {
 };
 
 export default BrandProductCard;
+BrandProductCard.propTypes = {
+  prod: PropTypes.object,
+};
