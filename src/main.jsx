@@ -12,6 +12,7 @@ import Register from "./Pages/Register";
 import BrandProducts from "./Pages/BrandProducts";
 import Update from "./Pages/Update";
 import Error from "./Pages/Error";
+import Details from "./Pages/Details";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,12 @@ const router = createBrowserRouter([
       {
         path: "/updateProduct/:id",
         element: <Update></Update>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/brandProducts/${params.id}`),
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/brandProducts/${params.id}`),
       },
