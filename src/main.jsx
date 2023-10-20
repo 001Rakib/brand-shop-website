@@ -11,11 +11,13 @@ import MyCart from "./Pages/MyCart";
 import Register from "./Pages/Register";
 import BrandProducts from "./Pages/BrandProducts";
 import Update from "./Pages/Update";
+import Error from "./Pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
