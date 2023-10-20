@@ -1,10 +1,27 @@
+import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const Details = () => {
   const productDetails = useLoaderData();
   const { name, brand_name, image, price, rating, type, description } =
     productDetails;
-  console.log(productDetails);
+
+  const handleAddToCart = () => {
+    fetch("http://localhost:5000/cartProduct", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(productDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          toast.success("Added to Cart Successfully");
+        }
+      });
+  };
+
   return (
     <div className="max-w-screen-xl mx-auto grid justify-center my-10">
       <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -32,6 +49,7 @@ const Details = () => {
           </h6>
 
           <button
+            onClick={handleAddToCart}
             className="flex items-center bg-blue-200 gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"
           >
