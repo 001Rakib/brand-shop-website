@@ -23,7 +23,7 @@ const Details = () => {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto grid justify-center my-10">
+    <div className="max-w-screen-xl mx-auto grid justify-center my-10 p-2 md:p-0">
       <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
           <img src={image} alt="image" className="object-cover w-full h-full" />
