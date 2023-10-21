@@ -1,19 +1,37 @@
 import PropTypes from "prop-types";
-const CartProducts = ({ product }) => {
+import Swal from "sweetalert2";
+const CartProducts = ({ product, setCartProduct, cartProduct }) => {
   const { image, name, price, _id } = product;
 
   const handleDelete = (_id) => {
-    console.log(_id);
-    fetch(
-      `https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/cartProduct/${_id}`,
-      {
-        method: "DELETE",
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(
+          `https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/cartProduct/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
+              const remainingCartProduct = cartProduct.filter(
+                (cProduct) => cProduct._id !== _id
+              );
+              setCartProduct(remainingCartProduct);
+            }
+          });
       }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    });
   };
 
   return (
@@ -48,4 +66,6 @@ const CartProducts = ({ product }) => {
 export default CartProducts;
 CartProducts.propTypes = {
   product: PropTypes.object,
+  setCartProduct: PropTypes.func,
+  cartProduct: PropTypes.array,
 };

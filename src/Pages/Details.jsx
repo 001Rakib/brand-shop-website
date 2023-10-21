@@ -8,6 +8,7 @@ const Details = () => {
     productDetails;
 
   const ratingNum = parseInt(rating);
+  const cartProduct = { name, price, image };
 
   const handleAddToCart = () => {
     fetch(
@@ -17,7 +18,7 @@ const Details = () => {
         headers: {
           "content-type": "application/json",
         },
-        body: JSON.stringify(productDetails),
+        body: JSON.stringify(cartProduct),
       }
     )
       .then((res) => res.json())
