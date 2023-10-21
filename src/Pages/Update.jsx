@@ -30,7 +30,7 @@ const Update = () => {
     console.log(JSON.stringify(updatedProduct));
     // send products to database
     fetch(
-      `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${_id}`,
+      `https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${_id}`,
       {
         method: "PUT",
         headers: {

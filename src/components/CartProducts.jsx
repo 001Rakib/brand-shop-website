@@ -5,7 +5,7 @@ const CartProducts = ({ product }) => {
   const handleDelete = (_id) => {
     console.log(_id);
     fetch(
-      `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/cartProduct/${_id}`,
+      `https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/cartProduct/${_id}`,
       {
         method: "DELETE",
       }

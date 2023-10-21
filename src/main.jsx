@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            "https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/cartProduct"
+            "https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/cartProduct"
           ),
       },
       {
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
         element: <BrandProducts></BrandProducts>,
         loader: () =>
           fetch(
-            `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts`
+            `https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/brandProducts`
           ),
       },
       {
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${params.id}`
+            `https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${params.id}`
           ),
       },
       {
@@ -83,7 +83,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${params.id}`
+            `https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${params.id}`
           ),
       },
     ],

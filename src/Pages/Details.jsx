@@ -1,3 +1,4 @@
+import { Rating } from "@material-tailwind/react";
 import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
@@ -6,9 +7,11 @@ const Details = () => {
   const { name, brand_name, image, price, rating, type, description } =
     productDetails;
 
+  const ratingNum = parseInt(rating);
+
   const handleAddToCart = () => {
     fetch(
-      "https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/cartProduct",
+      "https://a-10brand-shop-server-qkkeowvqn-rakib-hasans-projects-a466253b.vercel.app/cartProduct",
       {
         method: "POST",
         headers: {
@@ -48,7 +51,7 @@ const Details = () => {
             Price: ${price}
           </h6>
           <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-pink-500 uppercase">
-            Rating: {rating}
+            Rating: <Rating value={ratingNum}></Rating>
           </h6>
 
           <button
