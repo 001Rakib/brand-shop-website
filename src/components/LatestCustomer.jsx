@@ -10,10 +10,7 @@ const LatestCustomer = () => {
             <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
               Latest Customers
             </h5>
-            <a
-              href="#"
-              className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-            >
+            <a className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
               View all
             </a>
           </div>
@@ -140,10 +137,7 @@ const LatestCustomer = () => {
             <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
               Latest Customers
             </h5>
-            <a
-              href="#"
-              className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-            >
+            <a className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
               View all
             </a>
           </div>
@@ -270,10 +264,7 @@ const LatestCustomer = () => {
             <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
               Latest Customers
             </h5>
-            <a
-              href="#"
-              className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-            >
+            <a className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
               View all
             </a>
           </div>
