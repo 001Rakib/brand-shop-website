@@ -3,6 +3,7 @@ import BrandCard from "../components/BrandCard";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import TopSold from "../components/TopSold";
+import LatestCustomer from "../components/LatestCustomer";
 
 const Home = () => {
   const brands = useLoaderData();
@@ -17,6 +18,7 @@ const Home = () => {
         </div>
       </div>
       <TopSold></TopSold>
+      <LatestCustomer></LatestCustomer>
       <Footer></Footer>
     </>
   );
