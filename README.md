@@ -1,8 +1,13 @@
-# React + Vite
+# Brand Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [ Live Site Link ](https://a-10-brand-shop.web.app/)
 
-Currently, two official plugins are available:
+Click here for Live Site: [https://a-10-brand-shop.web.app/](https://a-10-brand-shop.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 5 Project Feature
+
+- User can login using google or using email password by simply registering to the site.
+- User will find 6 types of Brand and it's products.
+- User can view products and cart details only after login into the website.
+- User can toggle between light and dark theme.
+- After logging in user can add products to specific brand and also update any product details.
