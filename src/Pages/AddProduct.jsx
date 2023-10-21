@@ -15,13 +15,16 @@ const AddProduct = () => {
 
     console.log(JSON.stringify(newProduct));
     // send products to database
-    fetch("http://localhost:5000/brandProducts", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
+    fetch(
+      "https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

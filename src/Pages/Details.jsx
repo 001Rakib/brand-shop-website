@@ -7,13 +7,16 @@ const Details = () => {
     productDetails;
 
   const handleAddToCart = () => {
-    fetch("http://localhost:5000/cartProduct", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(productDetails),
-    })
+    fetch(
+      "https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/cartProduct",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(productDetails),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

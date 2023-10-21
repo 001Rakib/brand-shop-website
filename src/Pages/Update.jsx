@@ -29,13 +29,16 @@ const Update = () => {
 
     console.log(JSON.stringify(updatedProduct));
     // send products to database
-    fetch(`http://localhost:5000/brandProducts/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedProduct),
-    })
+    fetch(
+      `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

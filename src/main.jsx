@@ -13,6 +13,7 @@ import BrandProducts from "./Pages/BrandProducts";
 import Update from "./Pages/Update";
 import Error from "./Pages/Error";
 import Details from "./Pages/Details";
+import PrivateRoute from "./Pages/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -31,12 +32,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-product",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-cart",
-        element: <MyCart></MyCart>,
-        loader: () => fetch("http://localhost:5000/cartProduct"),
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/cartProduct"
+          ),
       },
       {
         path: "/register",
@@ -45,19 +57,34 @@ const router = createBrowserRouter([
       {
         path: "/brand/:id",
         element: <BrandProducts></BrandProducts>,
-        loader: () => fetch(`http://localhost:5000/brandProducts`),
+        loader: () =>
+          fetch(
+            `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts`
+          ),
       },
       {
         path: "/updateProduct/:id",
-        element: <Update></Update>,
+        element: (
+          <PrivateRoute>
+            <Update></Update>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brandProducts/${params.id}`),
+          fetch(
+            `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${params.id}`
+          ),
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brandProducts/${params.id}`),
+          fetch(
+            `https://a-10brand-shop-server-q4xirs9sv-rakib-hasans-projects-a466253b.vercel.app/brandProducts/${params.id}`
+          ),
       },
     ],
   },
